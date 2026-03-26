@@ -339,3 +339,11 @@ clearBtn.addEventListener('click', () => {
     categoryFilters.forEach(cb => cb.checked = false);
     filterProducts();
 });
+
+function openModal(id) {
+  document.getElementById(id).style.display = "flex";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
