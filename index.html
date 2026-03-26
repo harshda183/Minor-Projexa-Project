@@ -1,18 +1,23 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Costlyzer — Shop Smarter</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <!-- ══════════════════ TOP ANNOUNCEMENT BAR ══════════════════ -->
   <div class="announcement-bar">
-    <span>🚀 Free shipping on orders over ₹999 &nbsp;|&nbsp; 🎁 New arrivals every week &nbsp;|&nbsp; 💳 EMI available on all orders</span>
+    <span>🚀 Free shipping on orders over ₹999 &nbsp;|&nbsp; 🎁 New arrivals every week &nbsp;|&nbsp; 💳 EMI available
+      on all orders</span>
   </div>
 
   <!-- ══════════════════ HEADER ══════════════════ -->
@@ -36,16 +41,20 @@
       </div>
 
       <div class="header-actions">
-        <button class="icon-btn" title="Cart">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          <span class="badge">3</span>
+        <button class="icon-btn" id="cartBtn" title="Cart">
+          🛒
+          <span class="badge" id="cartCount">0</span>
         </button>
+
         <button class="icon-btn" title="Wishlist">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg>
         </button>
+
         <button class="btn-primary">Sign In</button>
       </div>
-
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -67,7 +76,8 @@
           Why worry about prices when you can focus on your
           <span class="gradient-text">desired products.</span>
         </h1>
-        <p class="hero-lead">Up to <strong>50% off</strong> on selected styles. Refresh your wardrobe with the latest trends curated just for you.</p>
+        <p class="hero-lead">Up to <strong>50% off</strong> on selected styles. Refresh your wardrobe with the latest
+          trends curated just for you.</p>
         <div class="hero-btns">
           <button class="btn-hero-primary">Shop Now →</button>
           <button class="btn-hero-outline">View Lookbook</button>
@@ -207,10 +217,11 @@
           </div>
           <a href="#" class="view-all">View all →</a>
         </div>
-        <div class="grid" >
+        <div class="grid">
           <article class="product-card stagger-1">
             <div class="product-img-wrap">
-              <img src="https://i.pinimg.com/736x/dc/7c/9d/dc7c9d7ba05968aebb1515215b6c7b1e.jpg" alt="Classic Denim Jacket">
+              <img src="https://i.pinimg.com/736x/dc/7c/9d/dc7c9d7ba05968aebb1515215b6c7b1e.jpg"
+                alt="Classic Denim Jacket">
               <div class="product-overlay">
                 <button class="quick-view">Quick View</button>
               </div>
@@ -226,13 +237,18 @@
                 <span class="price-original">₹1,199</span>
                 <span class="discount-badge">–27%</span>
               </div>
-              <button class="btn-add-cart">Add to Cart</button>
+              <button class="btn-add-cart" data-name="Classic Denim Jacket" data-price="879"
+                data-img="https://i.pinimg.com/736x/dc/7c/9d/dc7c9d7ba05968aebb1515215b6c7b1e.jpg"
+                data-desc="Stylish denim jacket for all seasons">
+                Add to Cart
+              </button>
             </div>
           </article>
 
           <article class="product-card stagger-2">
             <div class="product-img-wrap">
-              <img src="https://i.pinimg.com/1200x/9b/07/fd/9b07fd15394d1fd5a9d0c476c3f187c8.jpg" alt="Men's White Sneakers">
+              <img src="https://i.pinimg.com/1200x/9b/07/fd/9b07fd15394d1fd5a9d0c476c3f187c8.jpg"
+                alt="Men's White Sneakers">
               <div class="product-overlay">
                 <button class="quick-view">Quick View</button>
               </div>
@@ -248,13 +264,18 @@
                 <span class="price-original">₹1,500</span>
                 <span class="discount-badge">–36%</span>
               </div>
-              <button class="btn-add-cart">Add to Cart</button>
+              <button class="btn-add-cart" data-name="Men's White Sneakers" data-price="959"
+                data-img="https://i.pinimg.com/1200x/9b/07/fd/9b07fd15394d1fd5a9d0c476c3f187c8.jpg"
+                data-desc="Men's Sneaker Comfortable and Stylish">
+                Add to Cart
+              </button>
             </div>
           </article>
 
           <article class="product-card stagger-3">
             <div class="product-img-wrap">
-              <img src="https://i.pinimg.com/736x/65/24/80/6524806f7d31d531f685705a2061e4d3.jpg" alt="Women's Summer Dress">
+              <img src="https://i.pinimg.com/736x/65/24/80/6524806f7d31d531f685705a2061e4d3.jpg"
+                alt="Women's Summer Dress">
               <div class="product-overlay">
                 <button class="quick-view">Quick View</button>
               </div>
@@ -269,7 +290,11 @@
                 <span class="price-original">₹899</span>
                 <span class="discount-badge">–28%</span>
               </div>
-              <button class="btn-add-cart">Add to Cart</button>
+              <button class="btn-add-cart" data-name="Women's Summer Dress" data-price="899"
+                data-img="https://i.pinimg.com/736x/65/24/80/6524806f7d31d531f685705a2061e4d3.jpg"
+                data-desc="Beautiful floral dress for summers">
+                Add to Cart
+              </button>
             </div>
           </article>
 
@@ -291,7 +316,11 @@
                 <span class="price-original">₹10,000</span>
                 <span class="discount-badge">–19%</span>
               </div>
-              <button class="btn-add-cart">Add to Cart</button>
+              <button class="btn-add-cart" data-name="Leather Handbag" data-price="8120"
+                data-img="https://i.pinimg.com/736x/36/c8/1f/36c81f2b4be4cc82748cabb708ad227b.jpg"
+                data-desc="Authentic Leather Bag">
+                Add to Cart
+              </button>
             </div>
           </article>
         </div>
@@ -321,7 +350,8 @@
         <div class="grid grid-3">
           <article class="product-card mini stagger-1">
             <div class="product-img-wrap">
-              <img src="https://i.pinimg.com/1200x/51/2d/58/512d584edb28f2c13a87744cd4bd58c0.jpg" alt="Wireless Headphones">
+              <img src="https://i.pinimg.com/1200x/51/2d/58/512d584edb28f2c13a87744cd4bd58c0.jpg"
+                alt="Wireless Headphones">
               <div class="product-overlay"><button class="quick-view">Quick View</button></div>
               <span class="badge-tag">Hot</span>
               <button class="wish-btn">♡</button>
@@ -334,7 +364,11 @@
                 <span class="price">₹2,999</span>
                 <span class="price-original">₹4,500</span>
               </div>
-              <button class="btn-add-cart">Add to Cart</button>
+              <button class="btn-add-cart" data-name="Wireless Headphones" data-price="2999"
+                data-img="https://i.pinimg.com/1200x/51/2d/58/512d584edb28f2c13a87744cd4bd58c0.jpg"
+                data-desc="Dolby Sound Headphones">
+                Add to Cart
+              </button>
             </div>
           </article>
 
@@ -352,13 +386,18 @@
                 <span class="price">₹5,499</span>
                 <span class="price-original">₹7,000</span>
               </div>
-              <button class="btn-add-cart">Add to Cart</button>
+              <button class="btn-add-cart" data-name="Smart Watch Pro" data-price="5499"
+                data-img="https://i.pinimg.com/736x/2d/c0/9d/2dc09d8599573d971ced60ebef6e59d0.jpg"
+                data-desc="Smartwatch with latest features">
+                Add to Cart
+              </button>
             </div>
           </article>
 
           <article class="product-card mini stagger-3">
             <div class="product-img-wrap">
-              <img src="https://i.pinimg.com/1200x/3b/65/04/3b65042b9ca350c1128bde0ebb3a1b11.jpg" alt="Bluetooth Speaker">
+              <img src="https://i.pinimg.com/1200x/3b/65/04/3b65042b9ca350c1128bde0ebb3a1b11.jpg"
+                alt="Bluetooth Speaker">
               <div class="product-overlay"><button class="quick-view">Quick View</button></div>
               <span class="badge-tag sale-tag">Sale</span>
               <button class="wish-btn">♡</button>
@@ -371,7 +410,11 @@
                 <span class="price">₹1,299</span>
                 <span class="price-original">₹2,000</span>
               </div>
-              <button class="btn-add-cart">Add to Cart</button>
+              <button class="btn-add-cart" data-name="Bluetooth Speaker" data-price="1299"
+                data-img="https://i.pinimg.com/1200x/3b/65/04/3b65042b9ca350c1128bde0ebb3a1b11.jpg"
+                data-desc="Better performance">
+                Add to Cart
+              </button>
             </div>
           </article>
         </div>
@@ -403,13 +446,18 @@
                 <span class="price-original">₹3,200</span>
                 <span class="discount-badge">–22%</span>
               </div>
-              <button class="btn-add-cart">Add to Cart</button>
+              <button class="btn-add-cart" data-name="Running Shoes" data-price="2499"
+                data-img="https://i.pinimg.com/1200x/25/ac/55/25ac5568a407827e7775e330df14d71c.jpg"
+                data-desc="Running men shoes comfortable for daily use">
+                Add to Cart
+              </button>
+
             </div>
           </article>
 
           <article class="product-card stagger-2">
             <div class="product-img-wrap">
-              <img src="https://i.pinimg.com/1200x/d2/4c/d9/d24cd9a5602efbf1730f0387672a16ec.jpg" alt="Casual Loafers">
+              <img src="https://i.pinimg.com/1200x/25/ac/55/25ac5568a407827e7775e330df14d71c.jpg" alt="Casual Loafers">
               <div class="product-overlay"><button class="quick-view">Quick View</button></div>
               <button class="wish-btn">♡</button>
             </div>
@@ -422,7 +470,11 @@
                 <span class="price-original">₹2,499</span>
                 <span class="discount-badge">–28%</span>
               </div>
-              <button class="btn-add-cart">Add to Cart</button>
+              <button class="btn-add-cart" data-name="Tan Casual Loafers" data-price="1799"
+                data-img="https://i.pinimg.com/1200x/25/ac/55/25ac5568a407827e7775e330df14d71c.jpg"
+                data-desc="Casual Loafers">
+                Add to Cart
+              </button>
             </div>
           </article>
 
@@ -442,7 +494,10 @@
                 <span class="price-original">₹1,899</span>
                 <span class="discount-badge">–32%</span>
               </div>
-              <button class="btn-add-cart">Add to Cart</button>
+              <button class="btn-add-cart" data-name="Classic Block Heels " data-price="1299"
+                data-img="https://i.pinimg.com/736x/a0/43/e7/a043e7845685f47f4f4075ffb6789d28.jpg"
+                data-desc="Classic heels perfectly designed for special occasions">Add to Cart</button>
+
             </div>
           </article>
 
@@ -462,13 +517,14 @@
                 <span class="price-original">₹6,000</span>
                 <span class="discount-badge">–23%</span>
               </div>
-              <button class="btn-add-cart">Add to Cart</button>
+              <button class="btn-add-cart" data-name="Leather Ankle Boots" data-price="4599">Add to Cart</button>
+
             </div>
           </article>
         </div>
       </section>
 
-      
+
 
       <!-- ── Why Choose Us ── -->
       <div class="features-row reveal-up">
@@ -503,7 +559,8 @@
         <div class="testimonials-grid">
           <div class="test-card stagger-1">
             <div class="test-stars">★★★★★</div>
-            <p>"Absolutely love the quality and fast shipping! My new favorite store. The packaging was elegant and the clothes fit perfectly."</p>
+            <p>"Absolutely love the quality and fast shipping! My new favorite store. The packaging was elegant and the
+              clothes fit perfectly."</p>
             <div class="test-author">
               <img src="https://picsum.photos/seed/emily/60/60" alt="Emily R.">
               <div>
@@ -515,7 +572,8 @@
 
           <div class="test-card stagger-2">
             <div class="test-stars">★★★★★</div>
-            <p>"Great selection and amazing deals. The flash sale was a steal! Ordered 3 times already and never been disappointed."</p>
+            <p>"Great selection and amazing deals. The flash sale was a steal! Ordered 3 times already and never been
+              disappointed."</p>
             <div class="test-author">
               <img src="https://picsum.photos/seed/james/60/60" alt="James K.">
               <div>
@@ -527,7 +585,8 @@
 
           <div class="test-card stagger-3">
             <div class="test-stars">★★★★★</div>
-            <p>"Customer service was super helpful. Will definitely shop again! The return process was super easy and fast."</p>
+            <p>"Customer service was super helpful. Will definitely shop again! The return process was super easy and
+              fast."</p>
             <div class="test-author">
               <img src="https://picsum.photos/seed/sophia/60/60" alt="Sophia L.">
               <div>
@@ -571,13 +630,22 @@
         <p>Your ultimate destination for fashion, electronics, and lifestyle products at unbeatable prices.</p>
         <div class="footer-socials">
           <a class="social-btn" href="#" title="Instagram">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
           </a>
           <a class="social-btn" href="#" title="Twitter">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+            </svg>
           </a>
           <a class="social-btn" href="#" title="Pinterest">
-            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/></svg>
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z" />
+            </svg>
           </a>
         </div>
       </div>
@@ -637,6 +705,43 @@
   <!-- Back to Top -->
   <button class="back-to-top" id="backToTop" title="Back to top">↑</button>
 
-  <script src="script.js"></script>
+
+  <!-- 🛒 Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="closeCart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty">Your cart is empty</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <strong>Total:</strong>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button class="checkout-btn">Checkout</button>
+    </div>
+  </div>
+
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal">✖</span>
+      <img id="modalImg" width="200">
+      <h3 id="modalName"></h3>
+      <p id="modalDesc"></p>
+      <p id="modalPrice"></p>
+    </div>
+  </div>
+
+
 </body>
+
+<script src="script.js"></script>
+
+
 </html>

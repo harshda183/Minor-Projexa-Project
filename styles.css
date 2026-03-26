@@ -1206,3 +1206,145 @@ button { cursor: pointer; border: none; font-family: inherit; }
   .hamburger { display: flex; }
   .header-actions .btn-primary { display: none; }
 }
+
+/* 🛒 Cart Drawer */
+.cart-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.cart-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-drawer.active {
+  right: 0;
+}
+
+.cart-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.cart-footer {
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* CART PANEL */
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: #fff;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-panel.open {
+  right: 0;
+}
+
+.cart-header, .cart-footer {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.cart-item button {
+  background: rgb(15, 15, 15);
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.modal img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
