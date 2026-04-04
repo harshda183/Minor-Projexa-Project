@@ -1,3 +1,4 @@
+
 const header = document.getElementById('mainHeader');
 window.addEventListener('scroll', () => {
     header.classList.toggle('scrolled', window.scrollY > 20);
@@ -69,7 +70,7 @@ document.querySelectorAll('.btn-add-cart').forEach(btn => {
     btn.addEventListener('click', function () {
 
         const name = this.dataset.name || "Item";
-        const price = parseInt(this.dataset.price) || 0;
+        const price = Number(this.dataset.price) || 0;
 
         const existing = cart.find(item => item.name === name);
 
@@ -221,8 +222,8 @@ function renderCart() {
 
         div.innerHTML = `
             <div>
-                ${item.name} <br>
-                ₹${item.price} × ${item.qty}
+               ${item.name} ${item.size ? `(${item.size})` : ''} <br>
+              ₹${item.price} × ${item.qty}
             </div>
 
             <div>
@@ -339,3 +340,64 @@ clearBtn.addEventListener('click', () => {
     categoryFilters.forEach(cb => cb.checked = false);
     filterProducts();
 });
+
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', function (e) {
+
+        // Add to cart ya wishlist pe detail open nahi hoga
+        if (
+            e.target.closest('.btn-add-cart') ||
+            e.target.closest('.wish-btn')
+        ) {
+            return;
+        }
+
+        const addBtn = card.querySelector('.btn-add-cart');
+
+        const product = {
+            name: addBtn.dataset.name,
+            price: parseInt(addBtn.dataset.price),
+            img: addBtn.dataset.img,
+            desc: addBtn.dataset.desc
+        };
+
+        localStorage.setItem('selectedProduct', JSON.stringify(product));
+
+        window.location.href = "product.html";
+    });
+});
+
+const checkoutBtn = document.getElementById('checkoutBtn');
+
+if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', () => {
+        if (cart.length === 0) {
+            alert("Cart is empty");
+            return;
+        }
+
+        window.location.href = "checkout.html";
+    });
+}
+
+const searchInput = document.getElementById('searchInput');
+
+if (searchInput) {
+    searchInput.addEventListener('input', function () {
+        const searchValue = this.value.toLowerCase();
+
+        productCards.forEach(card => {
+            const name = card.querySelector('h3')?.textContent.toLowerCase() || "";
+            const category = card.querySelector('.product-cat')?.textContent.toLowerCase() || "";
+
+            if (
+                name.includes(searchValue) ||
+                category.includes(searchValue)
+            ) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+}
