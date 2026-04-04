@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Inter, sans-serif;
+            background: #f9fafb;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .back-btn {
+            margin-bottom: 20px;
+            cursor: pointer;
+            color: #555;
+        }
+
+        .product-detail {
+            display: flex;
+            gap: 50px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-img {
+            width: 400px;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+
+        .right {
+            flex: 1;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #111;
+        }
+
+        .desc {
+            color: #555;
+            margin: 15px 0;
+            line-height: 1.5;
+        }
+
+        .btn {
+            background: black;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #333;
+        }
+
+        .badge {
+            background: #111;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .product-detail:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 8px 14px;
+            background: linear-gradient(135deg, #020210, #04000c);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(11, 11, 15, 0.4);
+        }
+
+        .size {
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .size.active {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="back-btn" onclick="goBack()">⬅ Back</div>
+
+        <div class="product-detail">
+
+    <img id="detailImg" class="product-img" src="" alt="Product Image">
+
+    <div class="right">
+        <span class="badge">Premium</span>
+        <h2 id="detailName" class="title"></h2>
+        <h3 id="detailPrice" class="price"></h3>
+
+        <p>Select Size:</p>
+        <div>
+            <span class="size">S</span>
+            <span class="size">M</span>
+            <span class="size">L</span>
+            <span class="size">XL</span>
+        </div>
+
+        <p id="detailDesc" class="desc"></p>
+
+        <div>
+            <button onclick="changeQty(-1)">-</button>
+            <span id="qty">1</span>
+            <button onclick="changeQty(1)">+</button>
+        </div>
+
+        <button id="addToCartBtn" class="btn">Add to Cart</button>
+        
+    </div>
+
+</div>
+        </div>
+
+    </div>
+
+    <script src="product.js"></script>
+</body>
+
+</html>
