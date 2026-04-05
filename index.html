@@ -47,11 +47,12 @@
           <span class="badge" id="cartCount">0</span>
         </button>
 
-        <button class="icon-btn" title="Wishlist">
+        <button class="icon-btn" id="wishlistBtn" title="Wishlist">
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path
               d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
           </svg>
+          <span class="badge" id="wishlistCount">0</span>
         </button>
 
         <button class="btn-primary">Sign In</button>
@@ -455,23 +456,13 @@
 
             </div>
           </article>
-
-          <article class="product-card stagger-2">
-            <div class="product-img-wrap">
-              <img src="https://i.pinimg.com/1200x/25/ac/55/25ac5568a407827e7775e330df14d71c.jpg" alt="Casual Loafers">
-              <div class="product-overlay"><button class="quick-view">Quick View</button></div>
-              <button class="wish-btn">♡</button>
-            </div>
-            <div class="product-info">
-              <span class="product-cat">Men · Casual</span>
-              <h3>Tan Casual Loafers</h3>
-              <div class="stars">★★★★☆ <span>(88)</span></div>
-              <div class="price-row">
-                <span class="price">₹1,799</span>
-                <span class="price-original">₹2,499</span>
-                <span class="discount-badge">–28%</span>
-              </div>
-              <button class="btn-add-cart" data-name="Tan Casual Loafers" data-price="1799"
+<button class="wish-btn" onclick="addToWishlist({
+  id: 'shoes1',
+  title: 'Men\'s White Sneakers',
+  price: 959,
+  image: 'https://i.pinimg.com/1200x/9b/07/fd/9b07fd15394d1fd5a9d0c476c3f187c8.jpg'
+})">♡</button>
+n class="btn-add-cart" data-name="Tan Casual Loafers" data-price="1799"
                 data-img="https://i.pinimg.com/1200x/25/ac/55/25ac5568a407827e7775e330df14d71c.jpg"
                 data-desc="Casual Loafers">
                 Add to Cart
@@ -729,6 +720,24 @@
     </div>
   </div>
 
+  <!-- ❤️ Wishlist Drawer -->
+  <div class="cart-overlay" id="wishlistOverlay"></div>
+
+  <div class="cart-drawer" id="wishlistDrawer">
+    <div class="cart-header">
+      <h3>Your Wishlist</h3>
+      <button id="closeWishlist">✕</button>
+    </div>
+
+    <div class="cart-items" id="wishlistItems">
+      <p class="empty">Your wishlist is empty</p>
+    </div>
+
+    <div class="cart-footer">
+      <button class="checkout-btn" onclick="viewAllWishlist()">View All Products</button>
+    </div>
+  </div>
+
   <div id="productModal" class="modal">
     <div class="modal-content">
       <span id="closeModal">✖</span>
@@ -739,7 +748,7 @@
     </div>
   </div>
 
-
+<div id="wishlist-container"></div>
 </body>
 
 <script src="script.js"></script>
