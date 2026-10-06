@@ -5,7 +5,7 @@ const placeOrderBtn = document.getElementById('placeOrderBtn');
 
 let total = 0;
 
-// show order summary
+// show order summary//
 cart.forEach(item => {
   total += item.price * item.qty;
 
